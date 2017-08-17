@@ -1,7 +1,5 @@
-from sklearn.datasets import load_iris   #数据集
-from sklearn import tree         #决策树模型
-import graphviz
-
+from sklearn import tree  # 决策树模型
+from sklearn.datasets import load_iris  # 数据集
 
 clf = tree.DecisionTreeClassifier()     #导入分类决策树模型
 iris = load_iris()       #导入数据集
