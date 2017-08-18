@@ -26,12 +26,12 @@ def treeForecast(tree, inData, modelEval=regTreeEval):
             return modelEval(tree["right"], inData)
 
 
-def createForecast(tree, testData, modelEval=regTreeEval):
+def forecast(tree, testData, modelEval=regTreeEval):
     """对数据集进行预测"""
     m = len(testData)   #获取数据集个数
-    yHat = mat(zeros((m,1)))    #生成m*1的全0矩阵
+    yHat = zeros((m,1))   #生成m*1的全0数组
     for i in range(m):      #循环对每个数据进行预测
-        yHat[i,0] = treeForecast(tree, mat(testData[i]), modelEval)
+        yHat[i,0] = treeForecast(tree, testData[i], modelEval)
     return yHat
 
 

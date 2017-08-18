@@ -1,7 +1,6 @@
 from numpy import *
+import numpy as np
 
-a = {}
-
-print(type(a))
-if type(a).__name__ == "dict":
-    print("yeah,it is a dict")
+a = zeros((2,3))
+print(a[0])
+print(a[0][1])
