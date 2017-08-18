@@ -1,8 +1,7 @@
 from numpy import *
 
+a = {}
 
-a = [[1,2,3],[4,5,6],[7,8,9]]
-b = [1,2,3,4,5,6]
-
-m = mat(a)
-print(len(m[:,-1].tolist()))
+print(type(a))
+if type(a).__name__ == "dict":
+    print("yeah,it is a dict")

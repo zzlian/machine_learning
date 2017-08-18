@@ -36,6 +36,7 @@ def chooseBestSplit(dataSet, leafType=regLeaf, errType=regErr, ops=(1,4)):
                 bestIndex = featIndex
                 bestValue = splitVal
                 bestS = newS
+
     if (S - bestS) < tolS:  #划分后方差的差值不能小于默认阈值
         return None, leafType(dataSet)
     mat0,mat1 = binSplitDataSet(dataSet, bestIndex, bestValue)  #获得最终划分结果
